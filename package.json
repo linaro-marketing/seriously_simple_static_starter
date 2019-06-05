@@ -1,0 +1,38 @@
+{
+  "name": "saas-starter",
+  "version": "1.0.0",
+  "description": "A SaaS Start project theme for Jekyll. ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylekirkby/seriously-simple-saas-static-starter.git"
+  },
+  "keywords": [
+    "saas",
+    "jekyll",
+    "pagespeed",
+    "100",
+    "static",
+    "site",
+    "bootstrap",
+    "4"
+  ],
+  "author": "Kyle Kirkby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kylekirkby/seriously-simple-saas-static-starter/issues"
+  },
+  "homepage": "https://github.com/kylekirkby/seriously-simple-saas-static-starter#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.5",
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-include": "^2.4.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
