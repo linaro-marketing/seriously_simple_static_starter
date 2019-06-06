@@ -1,0 +1,46 @@
+title: Seriously Simple Static Starter Jekyll Theme
+tagline: A Jekyll theme that hit's pagespeed100 right out-of-the-box.
+email: kylekirkbyy@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
+    you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
+    website template for 2019.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+brand_logo: /assets/images/sssss.png
+# twitter_username: 
+# github_username:  
+highlighter: rouge
+# Default Post permalink
+permalink: /:categories/:title/
+# Default Markdown Processor
+markdown: kramdown
+plugins: [bootstrap, autoprefixer-rails, jekyll-picture-tag]
+# SASS Config
+sass:
+    sass_dir: _sass
+# Exclude Array - these files are excluded from
+# processing when running a jekyll build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - .git
+  - .asset-cache
+  - _static-site
+  - .sass-cache
+  - _site
+  - package.json
+  - node_modules/*
+  - gulpfile.js
+  - .jekyll-cache
+picture:
+  nomarkdown: false
+  source: "assets/images"
+  output: "static/images"
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
