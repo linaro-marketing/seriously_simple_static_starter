@@ -1,0 +1,25 @@
+<div class="row card__block p-t-50 p-b-50">
+    <div class="container">
+        <div class="row">
+            {% for card in include.object.items %}
+                <div class="col-md-{{include.object.card_width}}">
+                    <div class="card">
+                        {% assign card_image = card.image.path | replace: '/assets/images/','' %}
+                        {% picture card {{card_image}} alt=card.image.alt %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{card.title}}</h5>
+                            <p class="card-text">
+                                {{card.text | markdownify}}
+                            </p>
+                            {% if card.buttons %}
+                                {% for btn in card.buttons %}
+                                    <a class="btn {% if btn.class %}{{btn.class}}{% endif %}" href="{{btn.url}}">{{btn.title}}</a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<header>
+    <div class="container">
+        <div class="jumbotron text-white d-flex flex-column">
+            {% for section in include.object %}
+                {% if section.type == "title" %}
+                    <h1 class="display-3 p-t-100 font-weight-bold">{{section.content}}</h1>                
+                {% elsif section.type == "para" %}
+                    <p class="lead font-weight-bold">
+                        {{section.content}}
+                    </p>
+                {% elsif section.type  == "buttons" %}
+                    <p class="lead">
+                        {% for btn in section.content %}
+                            <a class="btn {% if btn.class %}{{btn.class}}{% endif %}"
+                             href="{{btn.url}}" role="button">{{btn.title}}</a>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</header>

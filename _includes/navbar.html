@@ -1,0 +1,38 @@
+<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-faded" data-toggle="affix">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            {% if site.brand_logo %}
+                <img class="navbar-brand" src="{{site.brand_logo}}" alt="{{site.title}} logo">
+            {% else %}
+                {{site.title}}
+            {% endif %} 
+        </a>
+        <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse"
+            data-target="#collapsingNavbar">
+            ☰
+        </button>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+            <ul class="nav navbar-nav ml-auto">
+                {% for section in site.data.nav %}
+                    {% if section.items %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">
+                                {{section.title}}
+                            </a>
+                            {% for sub_section in section.items %}
+                            <div class="dropdown-menu" aria-labelledby="Preview">
+                                <a class="dropdown-item" href="{{sub_section.url}}">{{sub_section.title}}</a>
+                            </div>
+                            {% endfor %}
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{section.url}}">{{section.title}}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

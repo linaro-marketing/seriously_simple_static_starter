@@ -1,0 +1,41 @@
+<div class="carousel home slide row" id="bootstrap-carousel">
+    <ol class="carousel-indicators">
+        {% for item in include.object.items %}
+            <li data-slide-to="{{forloop.index}}" data-target="#bootstrap-carousel" 
+            {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+        {% for slide in include.object.items %}
+        <div class="carousel-item darken {% if forloop.first %}active{% endif %}">
+<div markdown="1">
+{% assign slide_image = slide.image.path | replace: '/assets/images/','' %}
+{% picture blog {{slide_image}} alt=slide.image.alt %}
+</div>
+            <div class="carousel-caption flex-container">
+                <div class="flex-content">
+                    <h4 class="responsive-text-large">
+                        {{slide.title}}
+                    </h4>
+                    {% if slide.text %}
+                    <p class="responsive-text">
+                        {{slide.text}}
+                    </p>
+                    {% endif %}
+                    {% if slide.buttons %}
+                        {% for btn in slide.buttons %}
+                            <a class="btn btn-primary" href="{{btn.url}}">{{btn.title}}</a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div> 
+    <a class="carousel-control-prev" href="#bootstrap-carousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="sr-only">Previous</span></a>
+    <a class="carousel-control-next" href="#bootstrap-carousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="sr-only">Next</span></a>
+</div>
