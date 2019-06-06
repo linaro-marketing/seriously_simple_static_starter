@@ -19,5 +19,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2"
   spec.add_development_dependency "rake", "~> 12.0"
   spec.add_development_dependency 'bootstrap', '~> 4.3.1'
-  spec.add_development_dependency "jekyll-picture-tag", "~> 1.3.0"
+  spec.add_development_dependency "jekyll-4-picture-tag", "~> 1.0.0"
 end
