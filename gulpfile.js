@@ -8,7 +8,7 @@ const execSync = require('child_process').execSync;
 var sourcemaps = require('gulp-sourcemaps');
 
 var src = {
-    js: ['assets/js/vendor/jquery.js', 'assets/js/**/*.js',],
+    js: ['assets/js/vendor/jquery.js', 'assets/js/**/*.js']
 }
 var publishdir = '_site'
 var dist = {
@@ -57,7 +57,9 @@ function watchFiles() {
             "./_pages/**/*",
             "./_posts/**/*",
             "./_data/**/*",
-            "./**/*"
+            "./_sass/**/*",
+            "./**/*.md",
+            "./**/*.html",
         ],
         gulp.series(jekyll, scripts, browserSyncReload)
     );
