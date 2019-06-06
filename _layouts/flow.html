@@ -1,0 +1,23 @@
+---
+layout: base
+---
+{% if page.header %}
+    {% include header.html object=page.header %}
+{% endif %}
+<div class="container-fluid content" id="main_container">
+{% for section in page.sections %}
+    {% if section.type == "main-content" %}
+        <div class="row" id="main_content">
+            <div class="container">
+                {{content}}
+            </div>
+        </div>
+    {% elsif section.type == "slider" %}
+        {% include slider.html object=section %}
+    {% elsif section.type == "feature-block" %}
+        {% include feature-block.html object=section %}
+    {% elsif section.type == "cards" %}
+        {% include cards.html object=section %}
+    {% endif %}
+{% endfor %}
+</div>
