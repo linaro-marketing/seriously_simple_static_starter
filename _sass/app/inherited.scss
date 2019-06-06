@@ -1,0 +1,39 @@
+$z-index-navbar: 10;
+$footer-height: 60px;
+
+  
+  .site-header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $z-index-navbar;
+  }
+  
+  body > .site-header + .container {
+    padding: 60px 15px 0;
+  }
+  
+  .container {
+    max-width: 720px;
+  }
+  
+  .site-footer {
+    background-color: #ccc;
+    bottom: 0;
+    height: $footer-height;
+    line-height: 60px;
+    position: absolute;
+    width: 100%;
+  
+    ul {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+  
+      > li {
+        display: inline-block;
+        list-style-type: none;
+      }
+    }
+  }
