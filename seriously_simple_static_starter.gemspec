@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
     you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
     website template for 2019."
-  spec.homepage      = "https://kylekirkby.github.io/saas-starter/"
+  spec.homepage      = "https://seriously-simple-static-starter.github.io/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
