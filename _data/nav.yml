@@ -1,0 +1,13 @@
+- title: Getting Started
+  url: /getting-started/
+- title: Features
+  items:
+    - title: Bootstrap 4
+      url: /features/bootstrap4/
+    - title: Google PageSpeed 100
+      url: /features/pagespeed100/
+- title: Donate
+  url: /donate/
+- title: Showroom
+- title: Blog
+  url: /blog/
