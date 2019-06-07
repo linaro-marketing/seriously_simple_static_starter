@@ -1,5 +1,11 @@
 ---
-layout: default
+layout: base
 ---
-
-{{ content }}
+{% include header.html object=page %}
+<div class="container-fluid content" id="main_container">
+    <div class="row" id="main_content">
+        <div class="container">
+            {{content}}
+        </div>
+    </div>
+</div>
