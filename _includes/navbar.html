@@ -2,14 +2,16 @@
     <div class="container">
         <a class="navbar-brand" href="/">
             {% if site.brand_logo %}
-                <img class="navbar-brand" src="{{site.brand_logo}}" alt="{{site.title}} logo">
+                <img class="navbar-brand" src="{{site.brand_logo | prepend: site.baseurl }}" alt="{{site.title}} logo">
             {% else %}
                 {{site.title}}
             {% endif %} 
         </a>
-        <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse"
+        <button class="navbar-toggler hidden-sm-up pull-xs-right collapsed" type="button" data-toggle="collapse"
             data-target="#collapsingNavbar">
-            ☰
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsingNavbar">
             <ul class="nav navbar-nav ml-auto">
@@ -20,11 +22,11 @@
                                 aria-expanded="false">
                                 {{section.title}}
                             </a>
-                            {% for sub_section in section.items %}
-                            <div class="dropdown-menu" aria-labelledby="Preview">
-                                <a class="dropdown-item" href="{{sub_section.url}}">{{sub_section.title}}</a>
+                            <div class="dropdown-menu animated fast" aria-labelledby="Preview">
+                                {% for sub_section in section.items %}
+                                    <a class="dropdown-item text-center text-md-left" href="{{sub_section.url}}">{{sub_section.title}}</a>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
                         </li>
                     {% else %}
                         <li class="nav-item">
