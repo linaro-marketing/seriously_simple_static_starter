@@ -34,5 +34,16 @@
     "gulp-include": "^2.4.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "cssnano": "^4.1.10",
+    "grunt-postcss": "^0.9.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "pixrem": "^5.0.0",
+    "postcss-flexboxfixer": "0.0.5",
+    "yargs": "^13.2.4"
   }
 }
