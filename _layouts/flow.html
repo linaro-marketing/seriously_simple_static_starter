@@ -14,6 +14,8 @@ layout: base
         </div>
     {% elsif section.type == "slider" %}
         {% include slider.html object=section %}
+    {% elsif section.type == "latest-posts" %}
+        {% include latest-posts.html object=section %}
     {% elsif section.type == "feature-block" %}
         {% include feature-block.html object=section %}
     {% elsif section.type == "cards" %}
