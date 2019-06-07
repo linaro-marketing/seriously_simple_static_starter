@@ -1,6 +1,10 @@
 ---
 ---
 @charset 'UTF-8';
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
 $baseurl: "{{ site.baseurl }}";
 @font-face {
   font-family: 'fontello';
@@ -11,10 +15,12 @@ $baseurl: "{{ site.baseurl }}";
        url($baseurl + '/assets/fonts/fontello/fontello.ttf?53614618') format('truetype'),
        url($baseurl + '/assets/fonts/fontello/fontello.svg?53614618#fontello') format('svg');
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }
 @font-face {
     font-family: 'Lato';
+    font-display: swap;
     src: url($baseurl + '/assets/fonts/lato/regular/regular.eot'); /* IE9 Compat Modes */
     src: url($baseurl + '/assets/fonts/lato/regular/regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
         url($baseurl + '/assets/fonts/lato/regular/regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -24,6 +30,7 @@ $baseurl: "{{ site.baseurl }}";
 }
 @font-face {
     font-family: 'Lato';
+    font-display: swap;
     src: url($baseurl + '/assets/fonts/lato/bold/bold.eot'); /* IE9 Compat Modes */
     src: url($baseurl + '/assets/fonts/lato/bold/bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
         url($baseurl + '/assets/fonts/lato/bold/bold.woff2') format('woff2'), /* Super Modern Browsers */
@@ -32,12 +39,9 @@ $baseurl: "{{ site.baseurl }}";
         url($baseurl + '/assets/fonts/lato/bold/bold.svg') format('svg'); /* Legacy iOS */
     font-weight: bold;
 }
-@import "variables";
 @import "animation";
-@import "bootstrap";
 @import "theme";
 @import "fontello";
 @import "feature-block";
-@import "highlighter";
 @import "inherited";
-@import "navbar";
+@import "highlighter";
