@@ -1,0 +1,28 @@
+<div class="row card__block latest-posts p-t-50 p-b-50">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h3>Latest Posts</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in site.posts limit: include.object.number_of_posts %}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    {% assign post_image = post.image.path | replace: '/assets/images/','' %}
+                    <a href="{{post.url}}">
+                        {% picture card {{post_image}} alt=post.image.alt %}
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">
+                            {{post.content | truncatewords: 20, "..."}}
+                        </p>
+                        <a class="btn btn-primary" href="{{post.url}}">Read</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
