@@ -3,9 +3,11 @@
         <div class="row">
             {% for card in include.object.items %}
                 <div class="col-md-{{include.object.card_width}}">
-                    <div class="card">
+                    <div class="card text-center">
                         {% assign card_image = card.image.path | replace: '/assets/images/','' %}
-                        {% picture card {{card_image}} alt=card.image.alt %}
+                        <a href="{{card.url}}">
+                            {% picture card {{card_image}} alt=card.image.alt %}
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title">{{card.title}}</h5>
                             <p class="card-text">
