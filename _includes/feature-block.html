@@ -1,11 +1,11 @@
 <div class="row feature__block p-t-50 p-b-50">
     <div class="container">
         <div class="row">
-            <div class="col-md-7 block__image order-{% if include.object.format == "right" %}2{% else %}1{% endif %}">
+            <div class="col-md-7 block__image order-md-{% if include.object.format == "right" %}2{% else %}1{% endif %}">
                 {% assign block_image = include.object.image.path | replace: '/assets/images/','' %}
                 {% picture feature_block_image {{block_image}} alt=include.object.image.alt %}
             </div>
-            <div class="col-md-5 block__text order-{% if include.object.format == "right" %}1{% else %}2{% endif %}">
+            <div class="col-md-5 block__text order-md-{% if include.object.format == "right" %}1{% else %}2{% endif %}">
                 <h2>{{include.object.title}}</h2>
                 {% if include.object.highlight-text %}
                     <div class="font-weight-bold">
@@ -15,7 +15,7 @@
                 {{include.object.text | markdownify}}
                 {% if include.object.buttons %}
                     {% for btn in include.object.buttons %}
-                        <a class="btn {% if btn.class %}{{btn.class}}{% endif %}" href="{{btn.url}}">{{btn.title}}</a>
+                        <a class="btn btn-lg {% if btn.class %}{{btn.class}}{% endif %}" href="{{btn.url}}">{{btn.title}}</a>
                     {% endfor %}
                 {% endif %}
             </div>
