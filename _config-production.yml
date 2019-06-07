@@ -2,3 +2,8 @@ baseurl: "/ssss" # the subpath of your site, e.g. /blog
 url: "https://jekylly.com" # the base hostname & protocol for your site
 production: true
 destination: _production-site
+picture:
+  nomarkdown: false
+  source: "assets/images"
+  output: "assets/images"
+  cdn_url: https://jekylly.com/ssss/
