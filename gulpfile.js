@@ -32,26 +32,27 @@ else {
 // Sources
 var src = {
     js: ['assets/js/vendor/jquery.js', 'assets/js/**/*.js'],
-    css: [publishdir + '/assets/css/main.css']
+    css: [publishdir + '/assets/css/dist.css']
 }
 // Dist
 var dist = {
     all: [publishdir + '/**/*'],
     js: publishdir + '/assets/',
     vendor: publishdir + '/assets/',
-    css: publishdir + '/assets/css/'
+    css: publishdir + '/assets/'
 }
 // Javascript
 function buildJS() {
     return gulp.src(src.js)
         .pipe(sourcemaps.init())
-        .pipe(concat('app.js'))
+        .pipe(concat('dist.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dist.js))
 }
 function compressJS() {
-    return gulp.src(dist.js + "app.js")
+    return gulp.src(dist.js + "dist.js")
+        .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest(dist.js))
 }
 
