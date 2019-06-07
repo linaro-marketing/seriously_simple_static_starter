@@ -47,6 +47,10 @@ function browserSyncReload(done) {
 function jekyll() {
     return child_process.spawn("bundle", ["exec", "jekyll", "build", "--profile", "--trace"], { stdio: "inherit" });
 }
+// Build the Jekyll Site
+function jekyll_production() {
+    return child_process.spawn("bundle", ["exec", "jekyll", "build", "--profile", "--trace","--config","_config-production.yml"], { stdio: "inherit" });
+}
 // Watch files
 function watchFiles() {
     gulp.watch("./assets/js/**/*", gulp.series(scripts));
@@ -74,3 +78,4 @@ exports.jekyll = jekyll;
 exports.build = build;
 exports.default = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 exports.build = gulp.series(jekyll, scripts);
+exports.build_production = gulp.series(jekyll_production, scripts);
