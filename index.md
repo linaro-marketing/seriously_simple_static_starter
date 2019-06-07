@@ -5,19 +5,23 @@ description: >
     you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
     website template for 2019.
 keywords:  Jekyll Theme, PageSpeed 100, static website, gulpfile
-header: 
-    - content: A Seriously Simple Static Starter
-      type: title
-    - content: >
-        The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
-        you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
-        website template for 2019.
-      type: para  
-    - content:
-        - title: Get Started
-          url: /get-started/
-          class: btn-secondary
-      type: buttons
+header:
+    # image:
+    #   path: /assets/images/marketing.jpg
+    #   alt: Background image alt tag
+    items:
+      - content: A Seriously Simple Static Starter
+        type: title
+      - content: >
+          The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
+          you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
+          website template for 2019.
+        type: para  
+      - content:
+          - title: Get Started
+            url: /get-started/
+            class: btn-secondary
+        type: buttons
 sections:
     - type: main-content
     - type: feature-block
@@ -91,6 +95,8 @@ sections:
             path: /assets/images/marketing.jpg
             alt: Second slide background image
           url: /getting-started/
+    - type: latest-posts
+      number_of_posts: 4
     - type: cards
       card_width: 3
       items: 
