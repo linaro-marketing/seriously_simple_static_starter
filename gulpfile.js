@@ -60,6 +60,7 @@ function watchFiles() {
             "./_sass/**/*",
             "./**/*.md",
             "./**/*.html",
+            "./!_site/**/*",
         ],
         gulp.series(jekyll, scripts, browserSyncReload)
     );
