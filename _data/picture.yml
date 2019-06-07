@@ -91,6 +91,13 @@ markup_presets:
     noscript: true # Default: false
     attributes: 
       img: class="card-img-top lazyload"
+  header_image:
+    markup: auto
+    formats: [webp, original]
+    widths: [400, 750, 1000, 1400]
+    noscript: true # Default: false
+    attributes: 
+      img: class="header__image"
 
   # This is an example of how you'd get generated image and a URL, and nothing else.
   direct:
