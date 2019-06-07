@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const include = require('gulp-include');
+const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const child_process = require("child_process");
 const browsersync = require("browser-sync").create();
@@ -12,15 +13,7 @@ const cssnano = require("cssnano"); // CSS Minifier
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 var csso = require('gulp-csso');
-
-// PostCSS Plugins
-var postcss_plugins = [
-    autoprefixer(),
-    cssnano({
-        autoprefixer: false,
-        zindex: false
-    })
-];
+var concatUtil = require('gulp-concat-util');
 
 // Define the publish directory
 if (argv.production === undefined) {
@@ -32,7 +25,8 @@ else {
 // Sources
 var src = {
     js: ['assets/js/vendor/jquery.js', 'assets/js/**/*.js'],
-    css: [publishdir + '/assets/css/dist.css']
+    css: [publishdir + '/assets/css/dist.css'],
+    criticalCSS: ['./assets/css/critical.scss']
 }
 // Dist
 var dist = {
@@ -55,7 +49,24 @@ function compressJS() {
         .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest(dist.js))
 }
-
+// Critical CSS
+function criticalCSS(){
+    return gulp.src(src.criticalCSS)
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ["_sass/", "node_modules/"]
+        }))
+        .pipe(csso({
+            restructure: false,
+            sourceMap: false,
+            debug: true
+        }))
+        .pipe(rename({
+            basename: 'criticalCSS',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('_includes/'));
+}
 // Concatenate & Minifiy CSS
 // CSS is compiled from sass_sources and pushed through autoprefixer(add's cross browser support prefixes --web-kit etc)
 // and then minified using cssnano via the PostCSS API
@@ -64,7 +75,6 @@ function css() {
         .src(src.css)
         .pipe(sourcemaps.init())
         .pipe(rename({ suffix: ".min" }))
-        // .pipe(postcss(postcss_plugins))
         .pipe(csso({
             restructure: false,
             sourceMap: false,
@@ -119,7 +129,7 @@ function watchFiles() {
 
 // Exports/Tasks
 const scripts = gulp.series(buildJS, compressJS);
-const build = gulp.series(jekyll, scripts, css);
+const build = gulp.series(criticalCSS, jekyll, scripts, css);
 exports.js = scripts;
 exports.jekyll = jekyll;
 exports.build = build;
