@@ -43,7 +43,7 @@ $(document).ready(function () {
         var height = affixElement.outerHeight(),
             top = wrapper.offset().top;
 
-        if (scrollElement.scrollTop() >= (top - height)) {
+        if (scrollElement.scrollTop() >= 1) {
             affixElement.addClass("affix");
         }
         else {
