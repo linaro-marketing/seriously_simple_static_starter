@@ -35,10 +35,14 @@ exclude:
   - node_modules/*
   - gulpfile.js
   - .jekyll-cache
+  - README.md
+  - LICENSE.txt
+  - "*.gemspec"
+  - "*-lock.json"
 picture:
   nomarkdown: false
   source: "assets/images"
-  output: "static/images"
+  output: "assets/images"
 defaults:
   -
     scope:
