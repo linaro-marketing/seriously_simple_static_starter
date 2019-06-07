@@ -1,12 +1,13 @@
 title: Seriously Simple Static Starter Jekyll Theme
 tagline: A Jekyll theme that hit's pagespeed100 right out-of-the-box.
+footer-text: "[Twitter](https://twitter.com/the_actual_god) - [Instagram](https://instagram.com/)"
 email: kylekirkbyy@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     The Seriously Simple Static Starter is a lightweight and optimised Jekyll theme. This theme allows
     you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
     website template for 2019.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+baseurl: "/ssss" # the subpath of your site, e.g. /blog
+url: "https://jekylly.com" # the base hostname & protocol for your site
 brand_logo: /assets/images/ssss.png
 # twitter_username: 
 # github_username:  
@@ -44,3 +45,8 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+  -
+    scope:
+      type: posts # an empty string here means all files in the project
+    values:
+      layout: "post"
