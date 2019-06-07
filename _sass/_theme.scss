@@ -1,9 +1,37 @@
 ::-moz-selection { background: $primary; }
 ::selection { background: $primary; }
 
-.btn {
-    font-size: 1rem;
-    padding: 10px 30px;
+// .btn {
+//     font-size: 1rem;
+//     padding: 10px 30px;
+// }
+.card {
+    margin-top:30px;
+}
+.card__block {
+    .card {
+        .card-img-top {
+            overflow: hidden;
+        }
+        overflow: hidden;
+        &:hover {
+            margin-top: 25px;
+            -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+            img {
+                filter: brightness(100%);
+                }
+        }
+        img {
+            &:hover {
+                filter: brightness(100%);
+            }
+            filter: brightness(90%);
+            transition: all 1s ease-in-out;
+        }
+        transition: all 300ms ease-in-out;
+    }
 }
 .padded {
     padding: 50px 15px;
