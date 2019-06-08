@@ -14,5 +14,19 @@
             </div>
         </div>
         <script type="text/javascript" src="{{ "/assets/dist.min.js" | prepend: site.baseurl }}?v={% bust_cache %}"></script>
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="{{ "/assets/dist.min.css" | prepend: full_base_url }}?v={% bust_cache %}" />
+        </noscript>
+        <link rel="stylesheet" href="">
+        <script>
+            (function () {
+                var css = document.createElement('link');
+                css.type = 'text/css';
+                css.rel = 'stylesheet';
+                css.href = '{{ "/assets/dist.min.css" | prepend: full_base_url }}?v={% bust_cache %}';
+                var s = document.getElementsByTagName('link')[0];
+                s.parentNode.insertBefore(css, s);
+            })();
+        </script>
     </body>
 </html>
