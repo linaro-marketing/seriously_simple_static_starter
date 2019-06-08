@@ -8,7 +8,7 @@
             {% if include.object.items %}
             {% for section in include.object.items %}
                 {% if section.type == "title" %} 
-                    <h1 class="display-3 p-t-100 font-weight-bold">{{section.content}}</h1>                
+                    <h1 class="display-3 font-weight-bold">{{section.content}}</h1>                
                 {% elsif section.type == "para" %}
                     <p class="lead font-weight-bold">
                         {{section.content}}
@@ -23,7 +23,7 @@
                 {% endif %}
             {% endfor %}
             {% else %}
-                <h1 class="display-3 p-t-100 font-weight-bold">{{include.object.title}}</h1>
+                <h1 class="display-3 font-weight-bold">{{include.object.title}}</h1>
                 <p class="lead font-weight-bold">
                     {{include.object.description}}
                 </p>
