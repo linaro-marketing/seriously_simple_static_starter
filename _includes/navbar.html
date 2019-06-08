@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-faded" data-toggle="affix">
     <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="{{"/" | prepend: site.baseurl }}">
             {% if site.brand_logo %}
                 <img class="navbar-brand" src="{{site.brand_logo | prepend: site.baseurl }}" alt="{{site.title}}">
             {% else %}
@@ -24,13 +24,13 @@
                             </a>
                             <div class="dropdown-menu animated fast" aria-labelledby="Preview">
                                 {% for sub_section in section.items %}
-                                    <a class="dropdown-item text-center text-md-left" href="{{sub_section.url}}">{{sub_section.title}}</a>
+                                    <a class="dropdown-item text-center text-md-left" href="{{sub_section.url | prepend: site.baseurl }}">{{sub_section.title}}</a>
                                 {% endfor %}
                             </div>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{section.url}}">{{section.title}}</a>
+                            <a class="nav-link text-white" href="{{section.url | prepend: site.baseurl }}">{{section.title}}</a>
                         </li>
                     {% endif %}
                 {% endfor %}
