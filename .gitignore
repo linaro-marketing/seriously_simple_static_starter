@@ -6,3 +6,5 @@ _site
 Gemfile.lock
 node_modules
 *-lock.json
+_*-site
+_includes/criticalCSS.html

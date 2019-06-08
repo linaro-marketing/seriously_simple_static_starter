@@ -43,6 +43,49 @@ sections:
         - title: More Info
           url: /more-info/
           class: btn-secondary
+    - type: cards
+      card_width: 3
+      items: 
+        - title: Fast
+          image: 
+            path: /assets/images/marketing.jpg
+            alt: Card image alt tag
+          text: >
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          buttons:
+            - title: Go Somewhere
+              url: /get-started/
+              class: btn-primary
+        - title: Lightweight
+          image: 
+            path: /assets/images/marketing.jpg
+            alt: Card image alt tag
+          text: >
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          buttons:
+            - title: Go Somewhere
+              url: /get-started/
+              class: btn-primary
+        - title: Modern
+          image: 
+            path: /assets/images/marketing.jpg
+            alt: Card image alt tag
+          text: >
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          buttons:
+            - title: Go Somewhere
+              url: /get-started/
+              class: btn-primary
+        - title: Modern
+          image: 
+            path: /assets/images/marketing.jpg
+            alt: Card image alt tag
+          text: >
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          buttons:
+            - title: Go Somewhere
+              url: /get-started/
+              class: btn-primary
     - type: feature-block
       format: right
       image: 
