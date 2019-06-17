@@ -1,57 +1,64 @@
 ::-moz-selection { background: $primary; }
 ::selection { background: $primary; }
 
-// .btn {
-//     font-size: 1rem;
-//     padding: 10px 30px;
-// }
-.card {
-    margin-top:30px;
-}
 .card__block {
     padding: 0 50px;
-    .card {
-        .card-img-top {
-            overflow: hidden;
-        }
+}
+.card {
+    .card-img-top {
         overflow: hidden;
-        &:hover {
-            margin-top: 25px;
-            -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
-            img {
-                filter: brightness(100%);
-                }
-        }
-        img {
-            &:hover {
-                filter: brightness(100%);
-            }
-            filter: brightness(90%);
-            transition: all 1s ease-in-out;
-        }
-        transition: all 300ms ease-in-out;
     }
+    overflow: hidden;
+    &:hover {
+        margin-top: -5px;
+        -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+        img {
+            filter: brightness(100%);
+            }
+    }
+    img {
+        &:hover {
+            filter: brightness(100%);
+        }
+        filter: brightness(90%);
+        transition: all 1s ease-in-out;
+    }
+    transition: all 300ms ease-in-out;
 }
-.padded {
-    padding: 50px 15px;
-}
-section.container ul {
-    font-size: 20px;
-}
-section.container p {
-    font-size: 22px;
-}
-.container {
-    max-width: 1200px !important;
-}
+
 body{
-    font-family: 'Dosis';
+    font-family: 'Lato', sans-serif !important;
     background-color: #fff;
-}
-.dropdown-menu {
-    margin-top: -1px;
+    #wrapper {
+        #main_container {
+            padding-top: 110px;
+            background-color: #fff;
+            padding-bottom: 20px;
+            &.not_top {
+                padding-top:20px;
+                #main_content {
+                    padding-top: 0px;
+                }
+            }
+            #main_content {
+                padding-top: 20px;
+            }
+        }
+        .padded {
+            padding: 50px 15px;
+        }
+        section.container ul {
+            font-size: 20px;
+        }
+        section.container p {
+            font-size: 22px;
+        }
+        .container {
+            max-width: 1200px !important;
+        }
+    }
 }
 .container .col-md-4 a:hover {
     text-decoration: none;
@@ -68,7 +75,7 @@ div#main-container {
     background-color: white;
 }
 #wrapper .site-footer {
-    background-color: #212528;
+    background-color: $primary;
     height: 100%;
 }
 #wrapper .site-footer {
@@ -104,7 +111,7 @@ div#main-container {
     position: absolute;
     right: -5px;
     bottom: -15px;
-    background: #212529;
+    background: darken($primary, 10%);
     padding: 20px;
     color: white;
     text-align: center;
@@ -134,23 +141,9 @@ div#main-container {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s; 	
 }
-body{
-    font-family: 'Lato', sans-serif !important;
-}
-//Scroll Bar
-body::-webkit-scrollbar {
-    width: 1em;
-}
-body::-webkit-scrollbar-track {
-  background-color: #000;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: $gray-900;
-}
 .dropdown-menu.collapsing {
     display:block;
 }
-
 /* ANIMATED X */
 .navbar-toggler {
     border-color: none;
@@ -265,9 +258,14 @@ button.navbar-toggler {
     display: block;
     line-height: 23px;
 }
-.site-footer h3 {
-    color:#e9e9e9;
-    margin-top: 20px;
+.site-footer {
+    h3 {
+        color:#e9e9e9;
+        margin-top: 20px;
+    }
+    a {
+        color: darken($primary, 20%); 
+    }
 }
 
 ul.services-list li {

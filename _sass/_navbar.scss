@@ -3,7 +3,6 @@ header {
     overflow:hidden;
     height: auto;
     background-color: $primary;
-    background-color: #36a1f0;
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20enable-background%3D%22new%200%200%202560%201600%22%20version%3D%221.1%22%20viewBox%3D%220%200%202560%201600%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cstyle%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20type%3D%22text%2Fcss%22%3E%0D%0A%09.st0%7Bfill%3A%2336a1f0%3B%7D%0D%0A%20%20%20%20.st1%7Bfill%3Aurl%28%23a%29%3B%7D%0D%0A%20%20%20%20polygon%7Bfill%3A%2352a7e7%7D%3B%0D%0A%3C%2Fstyle%3E%0D%0A%3Cpattern%20id%3D%22a%22%20width%3D%22319.998%22%20height%3D%22319.998%22%20overflow%3D%22visible%22%20patternUnits%3D%22userSpaceOnUse%22%20viewBox%3D%220%20-399.997%20319.998%20319.998%22%3E%0D%0A%09%09%3Crect%20class%3D%22st0%22%20y%3D%22-400%22%20width%3D%22320%22%20height%3D%22320%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22240%20-79.999%20240%200%20160%20-79.999%20160%20-160%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22320%20-160%20240%20-79.999%20240%20-160%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%2279.999%20-79.999%2079.999%200%200%20-79.999%200%20-160%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22160%20-160%2079.999%20-79.999%2079.999%20-160%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22320%20-240%20320%20-160%20240%20-240%20240%20-320%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22160%20-240%20160%20-160%2079.999%20-240%2079.999%20-320%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22240%20-320%20160%20-240%20160%20-320%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22240%20-240%20240%20-160%20160%20-160%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%2279.999%20-320%200%20-240%200%20-320%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%2279.999%20-240%2079.999%20-160%200%20-160%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22240%20-400%20240%20-320%20160%20-400%20160%20-480%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22320%20-400%20320%20-320%20240%20-320%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%2279.999%20-400%2079.999%20-320%200%20-400%200%20-480%22%2F%3E%0D%0A%09%09%09%3Cpolygon%20points%3D%22160%20-400%20160%20-320%2079.999%20-320%22%2F%3E%0D%0A%3C%2Fpattern%3E%0D%0A%3Crect%20class%3D%22st1%22%20width%3D%222560%22%20height%3D%221600%22%2F%3E%0D%0A%3C%2Fsvg%3E");
     .jumbotron {
         background-color: transparent;
@@ -22,11 +21,7 @@ header {
       }
     }
 }
-img.navbar-brand {
-    height: 40px;
-    padding: 0 0;
-}
-
+// Animations for the dropdown menu
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -54,124 +49,123 @@ img.navbar-brand {
     transform: translate3d(0, 0, 0);
   }
 }
-
-#main_container {
-    padding-top: 70px;
-    background-color: #fff;
-}
 .navbar {
-  border-radius: 0;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  background-color: transparent;
-  @include media-breakpoint-down(sm) {
-    a.dropdown-item {
-        padding: 1rem 0.5rem;
+    background-color: $primary;
+    border-radius: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: $primary;
+    &.bg-faded:hover {
+        background-color:$primary;
     }
-  }
-  .nav-link {
-      font-size: 1.4rem;
-        &.dropdown-toggle{
-          &:hover + .dropdown-menu {
-              -webkit-animation-name: fadeInUp;
-              animation-name: fadeInUp;
-          }
+    &.bg-faded {
+        background-color:transparent;
+    }
+    &.affix {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: $primary;
+        .nav-item > a, .navbar-brand {
+            color: #fff;
         }
-  }
-  .dropdown.show {
-    .dropdown-menu {
-      opacity: 1;
     }
+
+    @include media-breakpoint-down(sm) {
+        a.dropdown-item {
+            padding: 1rem 0.5rem;
+        }
+        .collapse.show {
+            background-color: $primary;
+        }
+    }
+    img.navbar-brand {
+        height: 40px;
+        padding: 0 0;
+    }
+    .nav-link {
+        font-size: 1.4rem;
+        &.dropdown-toggle {
+            &:hover + .dropdown-menu {
+                -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+            }
+        }
+    }
+  .dropdown.show {
+        .dropdown-menu {
+            opacity: 1;
+        }
   }
   .dropdown-menu {
-          opacity: 0;
-            -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
-          &:hover {
+        opacity: 0;
+        -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+        margin-top: -2px;
+        &:hover {
             opacity: 1;
-          }
-          &::before {
-              border-color: rgba(184, 184, 184, 0);
-              border-bottom-color: #b8b8b8;
-              border-width: 6px;
-              background-clip: padding-box;
-            	bottom: 100%;
-              right: 15px;
-              border: solid transparent;
-              content: " ";
-              height: 0;
-              width: 0;
-              position: absolute;
-              pointer-events: none;
-          }
         }
-
-  padding-top: 30px;
-  padding-bottom: 30px;
-  .dropdown-toggle::after {
-      display: none;
-  }
-}
-.icon-bar {
-	width: 22px; 
-	height: 2px;
-	background-color: #fff;
-	display: block;
-	transition: all 0.2s;
-	margin-top: 4px
-}
-nav.navbar.navbar-dark.navbar-expand-md.fixed-top.bg-faded:hover {
-    background-color:$primary;
-}
-.navbar-toggler {
-  border: none;
-  background: transparent !important;
-}
- 
-.navbar-toggler .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-}
- 
-.navbar-toggler .middle-bar {
-  opacity: 0;
-}
- 
-.navbar-toggler .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
-}
- 
-.navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
-}
- 
-.navbar-toggler.collapsed .middle-bar {
-  opacity: 1;
-}
- 
-.navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
-}
-.affix {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-/* fixed to top styles */
-.affix.navbar {
-  background-color: $primary;
-}
-.affix.navbar .nav-item>a, 
-.affix.navbar .navbar-brand {
-  color: #fff;
+        &::before {
+            border-color: rgba(184, 184, 184, 0);
+            border-bottom-color: #b8b8b8;
+            border-width: 6px;
+            background-clip: padding-box;
+            bottom: 100%;
+            right: 15px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .navbar-toggler {
+        border: none;
+        background: transparent !important;
+        .icon-bar {
+            width: 22px; 
+            height: 2px;
+            background-color: #fff;
+            display: block;
+            transition: all 0.2s;
+            margin-top: 4px;
+            &.top-bar {
+                transform: rotate(45deg);
+                transform-origin: 10% 10%;
+            }
+            &.middle-bar {
+                opacity: 0;
+            }
+            &.bottom-bar {
+                transform: rotate(-45deg);
+                transform-origin: 10% 90%;
+            }
+        }
+        &.collapsed {
+            .top-bar {
+                transform: rotate(0);
+            }
+            .middle-bar {
+                opacity: 1;
+            }
+            .bottom-bar {
+                transform: rotate(0);
+            }
+        }
+    }
 }
 /* navbar collapsing */
 @media(max-width:34em) {
