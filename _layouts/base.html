@@ -13,6 +13,10 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="{{ "/assets/dist.min.js" | prepend: site.baseurl }}?v={% bust_cache %}"></script>
+        {% if site.using_jekyll_assets %}
+            <script type="text/javascript" src="{% asset_path bundle %}?v={% bust_cache %}"></script>
+        {% else %}
+            <script type="text/javascript" src="{{ "/assets/dist.min.js" | prepend: site.baseurl }}?v={% bust_cache %}"></script>
+        {% endif %}
     </body>
 </html>
