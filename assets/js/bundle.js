@@ -1,5 +1,5 @@
 //= require vendor/jquery
-//= require vendor/popper
+//= require vendor/_popper
 //= require vendor/bootstrap
 //= require vendor/clipboard
 //= require vendor/lazysizes.min
