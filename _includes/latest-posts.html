@@ -10,7 +10,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     {% assign post_image = post.image.path | replace: '/assets/images/','' %}
-                    <a href="{{post.url}}">
+                    <a href="{{post.url | prepend: site.baseurl }}">
                         {% picture card {{post_image}} alt=post.image.alt %}
                     </a>
                     <div class="card-body">
@@ -18,7 +18,7 @@
                         <p class="card-text">
                             {{post.content | truncatewords: 20, "..."}}
                         </p>
-                        <a class="btn btn-primary" href="{{post.url}}">Read</a>
+                        <a class="btn btn-primary" href="{{post.url | prepend: site.baseurl }}">Read</a>
                     </div>
                 </div>
             </div>
