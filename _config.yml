@@ -11,6 +11,8 @@ url: "" # the base hostname & protocol for your site
 brand_logo: /assets/images/ssss.png
 # Google Analytics Tracking Code
 google_analytics: UA-112865926-1
+# Jekyll Assets Toggle
+using_jekyll_assets: true
 # twitter_username: 
 # github_username:  
 highlighter: rouge
@@ -18,10 +20,11 @@ highlighter: rouge
 permalink: /:categories/:title/
 # Default Markdown Processor
 markdown: kramdown
-plugins: [bootstrap, autoprefixer-rails, jekyll-4-picture-tag]
+plugins: [bootstrap, autoprefixer-rails, jekyll-4-picture-tag, jekyll-assets]
 # SASS Config
 sass:
     sass_dir: _sass
+    style: compressed
 # Exclude Array - these files are excluded from
 # processing when running a jekyll build
 exclude:
@@ -56,3 +59,16 @@ defaults:
       type: posts # an empty string here means all files in the project
     values:
       layout: "post"
+# Jekyll Assets plugin - using this just for concatentating/uglifying js
+assets:
+  compress:
+        js: true
+        css: true
+  autoprefixer:
+      browsers: ["last 2 versions","> 5%","IE 9"]
+  sources:
+    - assets/js/
+    - assets/js/vendor/
+    - assets/js/app/
+    - assets/css/
+    - _sass
