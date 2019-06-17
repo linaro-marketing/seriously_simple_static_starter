@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            {% for post in site.posts limit: include.object.number_of_posts %}
+            {% for post in site.posts limit: include.limit %}
             <div class="col-md-3">
                 <div class="card text-center">
                     {% assign post_image = post.image.path | replace: '/assets/images/','' %}
