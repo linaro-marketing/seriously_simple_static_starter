@@ -5,12 +5,16 @@
     padding: 0 50px;
 }
 .card {
+    margin-top:20px;
     .card-img-top {
         overflow: hidden;
+        height: 200px;
+        object-fit: cover;
     }
     overflow: hidden;
     &:hover {
-        margin-top: -5px;
+        position: relative;
+        transform: translateY(-5px);
         -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
@@ -264,7 +268,10 @@ button.navbar-toggler {
         margin-top: 20px;
     }
     a {
-        color: darken($primary, 20%); 
+        color: lighten($primary, 20%);
+        &:hover {
+            color: $secondary;
+        }
     }
 }
 
@@ -383,10 +390,13 @@ img.img-fluid.team.lazyloaded {
 .highlighter-rouge button.btn {
     position: absolute;
     bottom: 0px;
-    z-index: 999999;
+    z-index: 999;
     right: 0px;
+    border-bottom-right-radius: 0px;
     border-left: 1px solid white;
     border-top: 1px solid white;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .highlighter-rouge button:focus {outline:0 !important;}
 .highlighter-rouge button.btn:hover {
