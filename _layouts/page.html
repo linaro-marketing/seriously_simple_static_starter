@@ -4,10 +4,14 @@ layout: base
 {% if page.header %}
     {% include header.html object=page.header %}
 {% endif %}
-<div class="container-fluid content {% if page.header %}not_top{% endif %}" id="main_container">
-    <div class="row" id="main_content">
-        <div class="container">
-            {{content}}
+{% if page.sections %}
+    {% include flow.html flow=page.sections %}
+{% else %}    
+    <div class="container-fluid content {% if page.header %}not_top{% endif %}" id="main_container">
+        <div class="row" id="main_content">
+            <div class="container">
+                {{content}}
+            </div>
         </div>
     </div>
-</div>
+{% endif %}
