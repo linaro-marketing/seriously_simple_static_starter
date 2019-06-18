@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-md fixed-top {% if page.header %}bg-faded{% endif %}" data-toggle="affix">
+<nav class="navbar navbar-dark navbar-expand-md fixed-top {% if page.header or page.is_post %}bg-faded{% endif %}" data-toggle="affix">
     <div class="container">
         <a class="navbar-brand" href="{{"/" | prepend: site.baseurl }}">
             {% if site.brand_logo %}
