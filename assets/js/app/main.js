@@ -23,7 +23,7 @@ $(function(){
             var currentId = "codeblock" + (i + 1);
             $(this).attr('id', currentId);
             //trigger
-            var clipButton = '<button data-toggle="tooltip" data-placement="left" title="Copied to Clipboard" class="btn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+            var clipButton = '<button data-toggle="tooltip" data-placement="left" title="Copied to Clipboard" class="btn" data-clipboard-target="#' + currentId + '"> <i aria-hidden="true" class="icon-clipboard"></i></button>';
                 $(this).append(clipButton);
         });
         var cb = new Clipboard('.highlighter-rouge .btn');
