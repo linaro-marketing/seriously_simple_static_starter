@@ -4,6 +4,9 @@
 .card__block {
     padding: 50px 0;
 }
+html {
+    background-color:$primary;
+}
 .card {
     margin-top:20px;
     .card-img-top {
