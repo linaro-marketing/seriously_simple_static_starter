@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "seriously_simple_static_starter"
-  spec.version       = "0.2.9"
+  spec.version       = "0.3.0"
   spec.authors       = ["Kyle Kirkby"]
   spec.email         = ["kyle.kirkby@linaro.org"]
   spec.summary       = "The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
@@ -19,5 +19,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-feed"
   spec.add_runtime_dependency "jekyll-4-picture-tag", "~> 1.0.1"
   spec.add_runtime_dependency 'jekyll-theme-assets-updated', '~> 1.1'
-  spec.add_runtime_dependency 'autoprefixer-rails', '9.6.0'
+  spec.add_runtime_dependency 'autoprefixer-rails', ' 9.5.1.1'
 end
