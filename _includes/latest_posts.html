@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             {% for post in site.posts limit: include.limit %}
-            <div class="col-md-3">
+            <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card text-center">
                     {% assign post_image = post.image.path | replace: '/assets/images/','' %}
                     <a href="{{post.url | prepend: site.baseurl }}">
@@ -15,6 +15,7 @@
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">{{post.title}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{post.date |  date: "%A, %B %-d, %Y"}}</h6>
                         <p class="card-text">
                             {{post.content | truncatewords: 20, "..."}}
                         </p>
