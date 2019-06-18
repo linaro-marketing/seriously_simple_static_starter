@@ -9,6 +9,8 @@ header:
     # image:
     #   path: /assets/images/marketing.jpg
     #   alt: Background image alt tag
+    # background_color: "#000"
+    # svg_header: true
     items:
       - content: A Seriously Simple Static Starter
         type: title
