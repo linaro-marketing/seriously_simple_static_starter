@@ -1,4 +1,5 @@
-<header class="{% if include.object.image %}background_image{% else %}svg{% endif%}">
+<header class="{% if include.object.image %}background_image{% elsif include.object.background_color %}{% elsif include.object.svg_background %}svg{% endif%}"
+{% if include.object.background_color %}style="background-color:{{include.object.background_color}}"{% endif %}>
     {% if include.object.image %}
         {% assign header_image_path = include.object.image.path | replace: '/assets/images', '' %}
         {% picture header_image {{header_image_path}} alt=include.object.image.alt%}
