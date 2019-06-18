@@ -139,7 +139,7 @@ sections:
             alt: Second slide background image
           url: /getting-started/
     - type: latest-posts
-      number_of_posts: 4
+      number_of_posts: 3
     - type: cards
       card_width: 3
       items: 
