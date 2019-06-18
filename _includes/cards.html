@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             {% for card in include.object.items %}
-                <div class="col-md-{{include.object.card_width}}">
+                <div class="col-md-{{include.object.card_width}} d-flex align-items-stretch">
                     <div class="card text-center">
                         {% assign card_image = card.image.path | replace: '/assets/images/','' %}
                         <a href="{{card.url}}">
