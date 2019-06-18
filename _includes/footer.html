@@ -1,9 +1,9 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row strip">
-            <div class="col-md-6 left center-sm">
-                <span class="text-muted text-light">
-                    &copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }} - {{site.footer-text | markdownify | replace: '<p>', '' | replace: '</p>','' }}
+            <div class="col-md-12 left center-sm">
+                <span class="text-light">
+                    {{site.footer-text | markdownify | replace: '<p>', '' | replace: '</p>','' }}
                 </span>
             </div>
         </div>
