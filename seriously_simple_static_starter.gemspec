@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 #   spec.add_runtime_dependency "jekyll", "~> 4.0.0.pre.alpha1"
   spec.add_development_dependency "rake", "~> 12.0"
   spec.add_runtime_dependency 'jekyll', '~> 3.7.3'
-  spec.add_runtime_dependency 'bootstrap', '~> 4.3.1'
+#   spec.add_runtime_dependency 'bootstrap', '~> 4.3.1'
   spec.add_runtime_dependency "jekyll-assets", "2.4.0"
   spec.add_runtime_dependency "jekyll-feed"
   spec.add_runtime_dependency "jekyll-4-picture-tag", "~> 1.0.1"
