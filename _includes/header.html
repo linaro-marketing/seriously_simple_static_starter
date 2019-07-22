@@ -8,8 +8,8 @@
         <div class="jumbotron text-white d-flex flex-column">
             {% if include.object.items %}
                 {% for section in include.object.items %}
-                    {% if section.type == "title" %} 
-                        <h1 class="display-3 font-weight-bold">{{section.content}}</h1>                
+                    {% if section.type == "title" %}
+                        <h1 class="{% if section.style %}{{section.style}}{% else %}display-3{% endif %} font-weight-bold">{{section.content}}</h1>
                     {% elsif section.type == "para" %}
                         <p class="lead font-weight-bold">
                             {{section.content}}
@@ -31,11 +31,11 @@
                 {% assign author = site.data.authors[page.author] %}
                 {% if author %}
                     <span class="author">
-                        Posted by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> on 
+                        Posted by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> on
                         {{include.object.date | date: "%A, %B %-d, %Y" }}
                     </span>
                 {% endif %}
             {% endif %}
-        </div> 
+        </div>
     </div>
 </header>
