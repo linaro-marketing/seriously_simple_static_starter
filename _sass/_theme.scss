@@ -50,7 +50,7 @@ body{
                 }
             }
             #main_content {
-                padding-top: 20px;
+                padding-top: 40px;
             }
         }
         .padded {
@@ -112,7 +112,7 @@ div#main-container {
     margin:0 auto;
     position:fixed;
     bottom:20px;
-    right:10px;	
+    right:10px;
 }
 .scroll {
     position: absolute;
@@ -127,14 +127,14 @@ div#main-container {
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
-    -o-transition: 0.5s; 		
+    -o-transition: 0.5s;
 }
 .scroll:hover {
     background:$gray-800;
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
-    -o-transition: 0.5s; 		
+    -o-transition: 0.5s;
 }
 .scroll:hover .fa {
     padding-top:-10px;
@@ -146,7 +146,7 @@ div#main-container {
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
-    -o-transition: 0.5s; 	
+    -o-transition: 0.5s;
 }
 .dropdown-menu.collapsing {
     display:block;
@@ -168,7 +168,7 @@ opacity: 0;
 transform: rotate(-45deg);
 transform-origin: 10% 90%;
 }
-   
+
 /* ANIMATED X COLLAPSED */
 
 .navbar-toggler.collapsed .top-bar {
@@ -185,21 +185,21 @@ transform: rotate(0);
 /* END ANIMATED X */
 
 .icon-bar {
-	width: 22px; 
+	width: 22px;
 	height: 2px;
 	background-color: #B6B6B6;
 	display: block;
 	transition: all 0.2s;
 	margin-top: 4px
 }
- 
+
 .navbar-toggler {
   border: none;
   background: transparent !important;
 }
-//navbar 
+//navbar
 .bg-dark{
-    background-color: $gray-900 !important; 
+    background-color: $gray-900 !important;
 }
 .bg-up {
     background-position-y: -300px !important;
@@ -327,7 +327,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     .m-#{str-slice($side, 0, 1)}-#{$space} {
       margin-#{$side}: #{$space}px !important;
     }
-  
+
     .p-#{str-slice($side, 0, 1)}-#{$space} {
       padding-#{$side}: #{$space}px !important;
     }
