@@ -1,19 +1,17 @@
 <div class="container-fluid content {% if page.header %}not_top{% endif %}" id="main_container">
-{% for section in include.flow %}
-    {% if section.type == "main-content" %}
-        <div class="row" id="main_content">
-            <div class="container">
-                {{content}}
+    {% for each in include.flow %}
+        {% if each.row == "main_content_row" %}
+            <div class="row" id="main_content">
+                <div class="container">
+                    {{content}}
+                </div>
             </div>
-        </div>
-    {% elsif section.type == "slider" %}
-        {% include slider.html object=section %}
-    {% elsif section.type == "latest-posts" %}
-        {% include latest_posts.html limit=section.number_of_posts %}
-    {% elsif section.type == "feature-block" %}
-        {% include feature-block.html object=section %}
-    {% elsif section.type == "cards" %}
-        {% include cards.html object=section %}
-    {% endif %}
-{% endfor %}
+        {% elsif each.row == "container_row" %}
+            {% include core/container_row.html object=each %}
+        {% elsif each.row == "full_width_row" %}
+            {% include core/full_width_row.html object=each %}
+        {% elsif each.row == "custom_include_row" %}
+            {% include {{each.source}} %}
+        {% endif %}
+    {% endfor %}
 </div>
