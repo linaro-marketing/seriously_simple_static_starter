@@ -6,24 +6,30 @@ description: >
     website template for 2019.
 keywords:  Jekyll Theme, PageSpeed 100, static website, gulpfile
 header:
+    showcase_image:
+        alt: Alt tag
+        path: /assets/images/drawing1.svg
+        svg: true
     # image:
     #   path: /assets/images/marketing.jpg
     #   alt: Background image alt tag
     # background_color: "#000"
     # svg_header: true
-    items:
-      - content: A Seriously Simple Static Starter
-        type: title
-      - content: >
+    sections:
+      - format: title
+        size: h1
+        content: A Seriously Simple Static Starter
+        class: display-3 font-weight-bold
+      - format: text
+        content: >
           The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
           you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
           website template for 2019.
-        type: para
-      - content:
+      - format: buttons
+        content:
           - title: Get Started
             url: /get-started/
-            class: btn-secondary
-        type: buttons
+            style: btn-secondary
 flow:
     - row: container_row
       sections:
