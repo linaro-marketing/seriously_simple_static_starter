@@ -12,7 +12,11 @@ brand_logo: /assets/images/ssss-resized.png
 # Google Analytics Tracking Code
 google_analytics: UA-112865926-1
 # Powered by
-powered_by: /assets/images/linaro_white_text.svg
+powered_by:
+  image_path: /assets/images/linaro_white_text.svg
+  image_alt: Linaro Logo
+  image_url: https://www.linaro.org
+  text: Powered by
 # Jekyll Assets Toggle
 using_jekyll_assets: true
 # twitter_username:
