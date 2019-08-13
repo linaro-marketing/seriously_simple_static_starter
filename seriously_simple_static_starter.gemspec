@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "seriously_simple_static_starter"
-  spec.version       = "0.6.3"
+  spec.version       = "0.6.5"
   spec.authors       = ["Kyle Kirkby"]
   spec.email         = ["kyle.kirkby@linaro.org"]
   spec.summary       = "The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
