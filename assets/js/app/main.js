@@ -15,10 +15,11 @@ $(function(){
             $('.scrolltop').stop(true, true).fadeOut();
         }
         if ($(this).scrollTop() + $(window).height() == $(document).height()){
-            $('.scrolltop').addClass("bottom");
+            var adjustment = $(".site-footer").height() + $(".scrolltop").height() + 20;
+            $(".scrolltop").css("bottom", adjustment);
         }
         else {
-            $(".scrolltop").removeClass("bottom");
+            $(".scrolltop").css("bottom","20px");
         }
     });
     $(window).on('load', function() {
