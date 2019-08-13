@@ -131,7 +131,7 @@ div#main-container {
     -o-transition: 0.5s;
 }
 .scroll:hover {
-    background:$gray-800;
+    background:darken($primary, 20%);
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -428,9 +428,37 @@ img.img-fluid.team.lazyloaded {
                 height: 300px;
             }
         }
+        .owl-nav button {
+            background: $primary !important;
+            outline: $primary !important;
+            border: 0px;
+            padding: 2px 10px !important;
+            line-height:24px;
+        }
+        .owl-nav button:hover {
+            background: darken($primary, 20%) !important;
+            outline: $primary !important;
+            border: 0px;
+            padding: 2px 10px !important;
+            line-height:24px;
+        }
+        .owl-nav button span {
+        font-size: 20px !important;
+        }
 
     }
     .block__text {
         margin-bottom: 20px;
     }
+}
+.btn {
+    position: relative;
+    transition: all 100ms ease-in-out;
+
+}
+.btn:hover {
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px -7px rgba(0,0,0,0.75);
 }
