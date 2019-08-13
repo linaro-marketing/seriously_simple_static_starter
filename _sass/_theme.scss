@@ -407,3 +407,21 @@ img.img-fluid.team.lazyloaded {
     background-color:#212529;
     color:white;
 }
+
+#flow_wrapper {
+    .row {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #fff;
+        position: relative;
+    }
+    .slider-block {
+        .owl-stage-outer.owl-height {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .block__text {
+        margin-bottom: 20px;
+    }
+}
