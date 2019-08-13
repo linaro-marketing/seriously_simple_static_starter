@@ -420,6 +420,15 @@ img.img-fluid.team.lazyloaded {
             height: auto;
             width: 100%;
         }
+        .owl-stage-outer {
+            height: 400px;
+        }
+        @include media-breakpoint-down(sm) {
+            .owl-stage-outer {
+                height: 300px;
+            }
+        }
+
     }
     .block__text {
         margin-bottom: 20px;
