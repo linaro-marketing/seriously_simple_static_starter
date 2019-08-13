@@ -11,6 +11,8 @@ url: "" # the base hostname & protocol for your site
 brand_logo: /assets/images/ssss-resized.png
 # Google Analytics Tracking Code
 google_analytics: UA-112865926-1
+# Powered by
+powered_by: https://www.linaro.org/assets/images/content/Linaro-Logo.svg
 # Jekyll Assets Toggle
 using_jekyll_assets: true
 # twitter_username:
