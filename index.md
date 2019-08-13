@@ -17,16 +17,18 @@ header:
     # svg_header: true
     sections:
       - format: title
-        size: h1
-        content: A Seriously Simple Static Starter
-        class: display-3 font-weight-bold
+        title_content:
+          size: h1
+          text: A Seriously Simple Static Starter
+          class: display-3 font-weight-bold text-left
       - format: text
-        content: >
-          The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
-          you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
-          website template for 2019.
+        text_content:
+          text: >
+            The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
+            you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
+            website template for 2019.
       - format: buttons
-        content:
+        buttons_content:
           - title: Get Started
             url: /get-started/
             style: btn-secondary
@@ -34,16 +36,14 @@ flow:
     - row: container_row
       sections:
         - format: feature_block
-          content:
-            side_content:
-                position: left
-                type: image
-                image:
-                    url: /about/
-                    svg: true
-                    style: homepage_animated_svg
-                    path: /assets/images/lkft_workflow.svg
-                    alt: Tech image alt tag
+          feature_block_content:
+            position: left
+            type: image
+            image_content_path: /assets/images/lkft_workflow.svg
+            url: /about/
+            image_content_is_svg: true
+            image_content_style: homepage_animated_svg
+            image_content_alt: Tech image alt tag
             title: Introducing Docker Entersliderprise 3.0
             highlight-text: >
                 Seamlessly build and share any application — from legacy to what comes next — and securely run them anywhere.
@@ -58,6 +58,8 @@ flow:
                 - title: More Info
                   url: /more-info/
                   class: btn-secondary
+    - row: container_row
+      sections:
         - format: cards
           card_width: 3
           items:
@@ -101,13 +103,59 @@ flow:
                 - title: Go Somewhere
                   url: /get-started/
                   class: btn-primary
+    - row: container_row
+      sections:
         - format: feature_block
-          content:
-            side_content:
-                position: right
-                type: youtube_video
-                content:
-                    url: https://www.youtube.com/watch?v=iNMhpvHCXRU
+          feature_block_content:
+            position: right
+            type: youtube_video
+            video_content_url: https://www.youtube.com/watch?v=iNMhpvHCXRU
+            title: YouTube Video Embed
+            highlight-text: >
+                This is an example of the youtube_video_embed.html
+            text: "
+                Over 750 enterprise organizations use Docker Enterprise for everything from modernizing traditional applications to [microservices](https://www.docker.com/solutions/microservices) and data science.
+
+                - Fast
+
+                - Simple
+
+                - Effective
+
+                - Modern
+                "
+            buttons:
+                - title: Explore Docker Products
+                  url: /explore/
+                  class: btn-primary
+                - title: More Info
+                  url: /more-info/
+                  class: btn-secondary
+    - row: container_row
+      sections:
+        - format: feature_block
+          feature_block_content:
+            position: left
+            type: slider
+            slider_content:
+                lightbox_enabled: true
+                seconds_per_slide: 5
+                nav: true
+                dots: false
+                xs_items: 1
+                sm_items: 1
+                md_items: 1
+                lg_items: 1
+                items:
+                    - image: /assets/images/placeholder.jpg
+                      alt: Background Image
+                      title: Background Image 1
+                    - image: /assets/images/placeholder.jpg
+                      alt: Background Image
+                      title: Background Image 1
+                    - image: /assets/images/placeholder.jpg
+                      alt: Background Image
+                      title: Background Image 1
             title: YouTube Video Embed
             highlight-text: >
                 This is an example of the youtube_video_embed.html
