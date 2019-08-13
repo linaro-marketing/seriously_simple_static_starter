@@ -5,6 +5,13 @@
                 <span class="text-light">
                     {{site.footer-text | markdownify | replace: '<p>', '' | replace: '</p>','' }}
                 </span>
+                {% if site.powered_by %}
+                <span class="powered_by">
+                    Powered by
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-src="{{site.powered_by}}" alt="Powered by footer logo" />
+                </span>
+                {% endif %}
             </div>
         </div>
     </div>
