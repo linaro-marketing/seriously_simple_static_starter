@@ -1,22 +1,22 @@
 {% for section in include.sections %}
     {% if section.format == "title" %}
-        {% include core/title.html object=section %}
+        {% include core/title.html object=section.title_content %}
     {% elsif section.format == "members" %}
-        {% include core/members_section.html object=section %}
+        {% include core/members-section.html object=section %}
     {% elsif section.format == "block" %}
         {% include core/blocks.html object=section %}
     {% elsif section.format == "buttons" %}
-        {% include core/buttons.html object=section.content style=section.style %}
+        {% include core/buttons.html object=section.buttons_content style=section.style %}
     {% elsif section.format == "text" %}
         {% include core/text.html object=section %}
-    {% elsif section.format == "custom" %}
-        {% include {{section.include_name}} object=section %}
+    {% elsif section.format == "custom_include" %}
+        {% include {{section.source}} object=section %}
     {% elsif section.format == "slider" %}
-        {% include core/slider_row.html object=section %}
-    {% elsif section.format == "feature_block" %}
-        {% include core/feature_block.html object=section.content %}
+        {% include core/slider_row.html object=section.slider_content %}
     {% elsif section.format == "latest-posts" %}
         {% include latest_posts.html limit=section.number_of_posts %}
+    {% elsif section.format == "feature_block" %}
+        {% include core/feature_block.html object=section.feature_block_content %}
     {% elsif section.format == "cards" %}
         {% include cards.html object=section %}
     {% endif %}
