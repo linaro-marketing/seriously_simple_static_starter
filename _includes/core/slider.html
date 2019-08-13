@@ -9,15 +9,16 @@
     {% if include.object.items %}
         {% assign carousel_items = include.object.items %}
     {% elsif include.object.data_source %}
-        {% assign carousel_items = site.data[include.object.data_source] %}
+        {% assign carousel_items = site.data[include.object.source] %}
     {% endif %}
     {% for item in carousel_items %}
         {% if include.object.lightbox_enabled %}<a data-featherlight="{{item.image}}">{% endif %}
         <div class="item">
             {% if item.image %}
-                {% assign image_path = member.image.path | replace: '/assets/images/','' %}
-                {% if item.image %}
-                    <img class="img-fluid svg_image {% if include.object.image.style %}{{include.object.image.style}}{% endif %}" alt="{{include.object.image.alt}}" src="{{image_path}}" />
+                {% assign image_path = item.image | replace: '/assets/images/','' %}
+                {% if item.image.is_svg %}
+                    <img class="img-fluid {% if include.object.image.style %}{    {include.object.image.style}}{% endif %}"
+                    alt="{{include.object.image.alt}}" src="{{image_path}}" />
                 {% else %}
                     {% picture feature_block_image {{image_path}} alt=include.object.image.alt %}
                 {% endif %}
