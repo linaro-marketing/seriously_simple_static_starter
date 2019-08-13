@@ -9,10 +9,10 @@
             {% if include.object.sections %}
                 {% if include.object.showcase_image %}
                 <div class="row">
-                    <div class="col col-xs-12 col-md-8">
+                    <div class="col-12 col-xs-12 col-md-8">
                         {% include flow_inner.html sections=include.object.sections %}
                     </div>
-                    <div class="col col-xs-12 col-md-4">
+                    <div class="col-12 col-xs-12 col-md-4">
                         {% assign image_path = include.object.showcase_image.path | replace: '/assets/images/','' %}
                         {% if include.object.showcase_image.svg %}
                             <img class="img-fluid svg_image {% if include.object.showcase_image.style %}{{include.object.showcase_image.style}}{% endif %}"
