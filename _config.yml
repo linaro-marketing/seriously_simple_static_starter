@@ -1,6 +1,6 @@
 title: Seriously Simple Static Starter Jekyll Theme
 tagline: A Jekyll theme that hit's pagespeed100 right out-of-the-box.
-footer-text: "© 2019 Linaro Limited"
+footer-text: "© 2019 Seriously Simple Static Starter"
 email: kylekirkbyy@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     The Seriously Simple Static Starter is a lightweight and optimised Jekyll theme. This theme allows
@@ -13,8 +13,8 @@ brand_logo: /assets/images/ssss-resized.png
 google_analytics: UA-112865926-1
 # Jekyll Assets Toggle
 using_jekyll_assets: true
-# twitter_username: 
-# github_username:  
+# twitter_username:
+# github_username:
 highlighter: rouge
 # Default Post permalink
 permalink: /:categories/:title/
@@ -75,3 +75,5 @@ assets:
     - assets/js/app/
     - assets/css/
     - _sass
+# Include the site content
+include: ['_site_content']
