@@ -9,9 +9,15 @@
             {% if site.powered_by %}
             <div class="col-md-4 right text-right center-sm">
                 <span class="powered_by">
-                    Powered by
+                    {% if site.powered_by.text %}
+                        {{site.powered_by.text}}
+                    {% else %}
+                        Powered by
+                    {% endif %}
+                    {% if site.powered_by.image_url %}<a href="{{site.powered_by.image_url}}">{% endif %}
                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                        data-src="{{site.powered_by}}" alt="Powered by footer logo" />
+                        data-src="{{site.powered_by.image_path}}" alt="{% if site.powered_by.image_alt %}{{site.powered_by.image_alt}}{% else %}Powered by footer logo{% endif %}" />
+                    {% if site.powered_by.image_url %}</a>{% endif %}
                 </span>
             </div>
             {% endif %}
