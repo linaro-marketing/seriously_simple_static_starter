@@ -114,6 +114,11 @@ div#main-container {
     position:fixed;
     bottom:20px;
     right:10px;
+    z-index: 99999;
+    transition: all 300ms ease-in-out;
+}
+.scrolltop.bottom {
+    bottom: 140px;
 }
 .scroll {
     position: absolute;
@@ -276,6 +281,13 @@ button.navbar-toggler {
         &:hover {
             color: $secondary;
         }
+    }
+    .powered_by img {
+        height: 30px;
+        width: auto;
+    }
+    .powered_by{
+        color:white;
     }
 }
 
