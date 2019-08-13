@@ -1,17 +1,19 @@
-<div class="container-fluid content {% if page.header %}not_top{% endif %}" id="main_container">
-    {% for each in include.flow %}
-        {% if each.row == "main_content_row" %}
-            <div class="row" id="main_content">
-                <div class="container">
-                    {{content}}
+<div id="flow_wrapper">
+    <div class="container-fluid content {% if page.header %}not_top{% endif %}" id="main_container">
+        {% for each in include.flow %}
+            {% if each.row == "main_content_row" %}
+                <div class="row" id="main_content">
+                    <div class="container">
+                        {{content}}
+                    </div>
                 </div>
-            </div>
-        {% elsif each.row == "container_row" %}
-            {% include core/container_row.html object=each %}
-        {% elsif each.row == "full_width_row" %}
-            {% include core/full_width_row.html object=each %}
-        {% elsif each.row == "custom_include_row" %}
-            {% include {{each.source}} %}
-        {% endif %}
-    {% endfor %}
+            {% elsif each.row == "container_row" %}
+                {% include core/container_row.html object=each %}
+            {% elsif each.row == "full_width_row" %}
+                {% include core/full_width_row.html object=each %}
+            {% elsif each.row == "custom_include_row" %}
+                {% include {{each.source}} %}
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
