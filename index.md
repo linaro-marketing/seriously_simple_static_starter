@@ -1,5 +1,6 @@
 ---
 layout: page
+title: A Seriously Simple Static Starter Jekyll Theme
 description: >
     The Seriously Simple Static Starter is a lightweight and optimsied Jekyll theme. This theme allows
     you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
@@ -19,7 +20,7 @@ header:
       - format: title
         title_content:
           size: h1
-          text: A Seriously Simple Static Starter
+          text: A Seriously Simple Static Starter Jekyll Theme
           class: display-3 font-weight-bold text-left
       - format: text
         text_content:
@@ -31,6 +32,7 @@ header:
         buttons_content:
           - title: Get Started
             url: /get-started/
+            icon: icon-github-circled
             style: btn-secondary
 flow:
     - row: container_row
@@ -109,28 +111,21 @@ flow:
           feature_block_content:
             position: right
             type: youtube_video
-            video_content_url: https://www.youtube.com/watch?v=iNMhpvHCXRU
-            title: YouTube Video Embed
+            video_content_url: https://www.youtube.com/watch?v=QH2-TGUlwu4
+            title: A YouTube Video Feature Block
             highlight-text: >
-                This is an example of the youtube_video_embed.html
+                Simply add featured videos to your static site
             text: "
-                Over 750 enterprise organizations use Docker Enterprise for everything from modernizing traditional applications to [microservices](https://www.docker.com/solutions/microservices) and data science.
-
-                - Fast
-
-                - Simple
-
-                - Effective
-
-                - Modern
+                Provide the URL to your YouTube video and let the theme do the rest!
                 "
             buttons:
-                - title: Explore Docker Products
-                  url: /explore/
+                - title: Get Started
+                  url: /get-started/
                   class: btn-primary
-                - title: More Info
+                - title: View on Github
                   url: /more-info/
                   class: btn-secondary
+                  icon: icon-github-circled
     - row: container_row
       sections:
         - format: feature_block
@@ -156,26 +151,30 @@ flow:
                     - image: /assets/images/placeholder.jpg
                       alt: Background Image
                       title: Background Image 1
-            title: YouTube Video Embed
+            title: A Slider Feature Block
             highlight-text: >
-                This is an example of the youtube_video_embed.html
+                This section features an owl carousel feature block.
             text: "
-                Over 750 enterprise organizations use Docker Enterprise for everything from modernizing traditional applications to [microservices](https://www.docker.com/solutions/microservices) and data science.
+                You can customize:
 
-                - Fast
+                - Number of Items on different breakpoints
 
-                - Simple
+                - Toggle Nav
 
-                - Effective
+                - Slide Timeout
 
-                - Modern
+                - Lightbox on items
+
+
+                All from your Jekyll frontmatter!
                 "
             buttons:
-                - title: Explore Docker Products
-                  url: /explore/
+                - title: Get Started
+                  url: /get-started/
                   class: btn-primary
-                - title: More Info
-                  url: /more-info/
+                - title: View on GitHub
+                  url: https://github.com/linaro-marketing/seriously_simple_static_starter/wiki
                   class: btn-secondary
+                  icon: icon-github-circled
 ---
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
