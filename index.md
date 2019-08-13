@@ -9,8 +9,8 @@ keywords:  Jekyll Theme, PageSpeed 100, static website, gulpfile
 header:
     showcase_image:
         alt: Alt tag
-        path: /assets/images/drawing1.svg
-        svg: true
+        path: /assets/images/demo-site.png
+        # svg: true
     # image:
     #   path: /assets/images/marketing.jpg
     #   alt: Background image alt tag
