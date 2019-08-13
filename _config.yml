@@ -13,9 +13,9 @@ brand_logo: /assets/images/ssss-resized.png
 google_analytics: UA-112865926-1
 # Powered by
 powered_by:
-  image_path: /assets/images/linaro_white_text.svg
-  image_alt: Linaro Logo
-  image_url: https://www.linaro.org
+  image_path: https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-black-transparent.png
+  image_alt: Jekyll Lgoo
+  image_url: https://jekyllrb.com
   text: Powered by
 # Jekyll Assets Toggle
 using_jekyll_assets: true
