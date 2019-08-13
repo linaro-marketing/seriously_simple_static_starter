@@ -10,8 +10,15 @@ $(function(){
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('.scrolltop:hidden').stop(true, true).fadeIn();
-        } else {
+        }
+        else {
             $('.scrolltop').stop(true, true).fadeOut();
+        }
+        if ($(this).scrollTop() + $(window).height() == $(document).height()){
+            $('.scrolltop').addClass("bottom");
+        }
+        else {
+            $(".scrolltop").removeClass("bottom");
         }
     });
     $(window).on('load', function() {
