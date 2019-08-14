@@ -1,11 +1,26 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row strip">
-            <div class="col-md-12 left center-sm">
+            <div class="col-md-8 left center-sm">
                 <span class="text-light">
                     {{site.footer-text | markdownify | replace: '<p>', '' | replace: '</p>','' }}
                 </span>
             </div>
+            {% if site.powered_by %}
+            <div class="col-md-4 right text-right center-sm">
+                <span class="powered_by">
+                    {% if site.powered_by.text %}
+                        {{site.powered_by.text}}
+                    {% else %}
+                        Powered by
+                    {% endif %}
+                    {% if site.powered_by.image_url %}<a href="{{site.powered_by.image_url}}">{% endif %}
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-src="{{site.powered_by.image_path}}" alt="{% if site.powered_by.image_alt %}{{site.powered_by.image_alt}}{% else %}Powered by footer logo{% endif %}" />
+                    {% if site.powered_by.image_url %}</a>{% endif %}
+                </span>
+            </div>
+            {% endif %}
         </div>
     </div>
 </footer>

@@ -6,23 +6,25 @@
     {% endif %}
     <div class="container">
         <div class="jumbotron text-white d-flex flex-column">
-            {% if include.object.items %}
-                {% for section in include.object.items %}
-                    {% if section.type == "title" %} 
-                        <h1 class="display-3 font-weight-bold">{{section.content}}</h1>                
-                    {% elsif section.type == "para" %}
-                        <p class="lead font-weight-bold">
-                            {{section.content}}
-                        </p>
-                    {% elsif section.type  == "buttons" %}
-                        <p class="lead">
-                            {% for btn in section.content %}
-                                <a class="btn {% if btn.class %}{{btn.class}}{% endif %}"
-                                href="{{btn.url}}" role="button">{{btn.title}}</a>
-                            {% endfor %}
-                        </p>
-                    {% endif %}
-                {% endfor %}
+            {% if include.object.sections %}
+                {% if include.object.showcase_image %}
+                <div class="row">
+                    <div class="col-12 col-xs-12 col-md-8">
+                        {% include flow_inner.html sections=include.object.sections %}
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-4">
+                        {% assign image_path = include.object.showcase_image.path | replace: '/assets/images/','' %}
+                        {% if include.object.showcase_image.svg %}
+                            <img class="img-fluid svg_image {% if include.object.showcase_image.style %}{{include.object.showcase_image.style}}{% endif %}"
+                             alt="{{include.object.showcase_image.alt}}" src="{{include.object.showcase_image.path}}" />
+                        {% else %}
+                            {% picture feature_block_image {{image_path}} alt=include.object.showcase_image.alt %}
+                        {% endif %}
+                    </div>
+                </div>
+                {% else %}
+                    {% include flow_inner.html sections=include.object.sections %}
+                {% endif %}
             {% else %}
                 <h1 class="display-3 font-weight-bold">{{include.object.title}}</h1>
                 <p class="lead font-weight-bold">
@@ -31,11 +33,11 @@
                 {% assign author = site.data.authors[page.author] %}
                 {% if author %}
                     <span class="author">
-                        Posted by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> on 
+                        Posted by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> on
                         {{include.object.date | date: "%A, %B %-d, %Y" }}
                     </span>
                 {% endif %}
             {% endif %}
-        </div> 
+        </div>
     </div>
 </header>

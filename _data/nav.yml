@@ -1,19 +1,9 @@
 - title: Getting Started
-  url: /about/
+  url: /getting-started/
 - title: Features
   items:
-    - title: Bootstrap 4
-      url: /features/bootstrap4/
-    - title: Google PageSpeed 100
-      url: /features/pagespeed100/
-- title: Donate
-  items:
-    - title: Bootstrap 4
-      url: /features/bootstrap4/
-    - title: Google PageSpeed 100
-      url: /features/pagespeed100/
-    - title: Google PageSpeed 100
-      url: /features/pagespeed100/
+    - title: Flow Layout
+      url: /features/flow/
     - title: Google PageSpeed 100
       url: /features/pagespeed100/
 - title: Showroom

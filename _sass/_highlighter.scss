@@ -82,3 +82,12 @@ pre.highlight::-webkit-scrollbar-thumb:horizontal{
 .highlight pre {
     background-color: #212528;
 }
+
+// Bash prepend
+.language-bash.highlighter-rouge code:before {
+    content: '$';
+    color: lighten($primary, 20%);
+    margin-right: 10px;
+    top:1px;
+    position: relative;
+}

@@ -27,7 +27,6 @@
   }
 }
 .navbar {
-    background-color: $primary;
     border-radius: 0;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -63,7 +62,7 @@
         }
     }
     img.navbar-brand {
-        height: 40px;
+        height: 66px;
         padding: 0 0;
     }
     .nav-link {
@@ -113,7 +112,7 @@
         border: none;
         background: transparent !important;
         .icon-bar {
-            width: 22px; 
+            width: 22px;
             height: 2px;
             background-color: #fff;
             display: block;
