@@ -82,4 +82,4 @@ assets:
     - assets/css/
     - _sass
 # Include the site content
-include: ['_site_content']
+include: ['_pages']
