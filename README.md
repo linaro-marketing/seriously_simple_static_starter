@@ -6,7 +6,7 @@ Demo Site available here: [https://jekylly.com/ssss/](https://jekylly.com/ssss/)
 
 # Documentation
 
-The documentation for this theme is available at the [Wiki](/wiki).
+The documentation for this theme is available at the [Wiki](https://github.com/linaro-marketing/seriously_simple_static_starter/wiki).
 
 ## Contributing
 
