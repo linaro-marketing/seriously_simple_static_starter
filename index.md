@@ -41,25 +41,20 @@ flow:
           feature_block_content:
             position: left
             type: image
-            image_content_path: /assets/images/lkft_workflow.svg
+            image_content_path: /assets/images/demo-site.png
             url: /about/
-            image_content_is_svg: true
             image_content_style: homepage_animated_svg
-            image_content_alt: Tech image alt tag
-            title: Introducing Docker Entersliderprise 3.0
+            image_content_alt: Demo site image
+            title: An Image Feature Block
             highlight-text: >
-                Seamlessly build and share any application — from legacy to what comes next — and securely run them anywhere.
+                Hightlight cruical content/projects with ease using feature block's
             text: >
-                Docker Enterprise is the easiest and fastest way to use containers and [Kubernetes](https://www.docker.com/products/kubernetes) at scale and delivers the fastest time to production for modern applications, securely running them from hybrid cloud to the edge.
-
-                Over 750 enterprise organizations use Docker Enterprise for everything from modernizing traditional applications to [microservices](https://www.docker.com/solutions/microservices)and data science.
+                Feature blocks can contain videos, sliders or images and highlight's important content in an eye catching way.
             buttons:
-                - title: Explore Docker Products
+                - title: View on GitHub
                   url: /explore/
+                  icon: icon-github-circled
                   class: btn-primary
-                - title: More Info
-                  url: /more-info/
-                  class: btn-secondary
     - row: container_row
       sections:
         - format: cards
