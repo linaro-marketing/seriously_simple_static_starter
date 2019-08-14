@@ -6,11 +6,11 @@ description: > # this means to ignore newlines until "baseurl:"
     The Seriously Simple Static Starter is a lightweight and optimised Jekyll theme. This theme allows
     you to get your feet off the ground quickly with a modern Google pagespeed 100 out-of-the-box
     website template for 2019.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-brand_logo: /assets/images/ssss-resized.png
+baseurl: "/ssss" # the subpath of your site, e.g. /blog
+url: "https://jekylly.com" # the base hostname & protocol for your site
+brand_logo: /assets/images/ssss.png
 # Google Analytics Tracking Code
-google_analytics: UA-112865926-1
+# google_analytics: UA-112865926-1
 # Powered by
 powered_by:
   image_path: https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-black-transparent.png
@@ -54,6 +54,7 @@ picture:
   nomarkdown: false
   source: "assets/images"
   output: "assets/images"
+  relative_url: false
 defaults:
   -
     scope:
