@@ -2,11 +2,11 @@
     <div class="row">
         <div class="col-xs-12 col-sm-7 block__image order-2 order-md-{% if include.object.position == "right" %}2{% else %}1{% endif %}">
             {% if include.object.type == "image" %}
-                {% assign image_path = include.object.image_content_path | remove_first: '/' %}
+                {% assign image_path = include.object.image_content_path | remove_first: '/assets/images/' %}
                 {% assign full_path = include.object.image_content_path %}
                 {% if include.object.image_content_is_svg %}
                     <img class="img-fluid svg_image {% if include.object.image_content_style %}{{include.object.image_content_style}}{% endif %}"
-                        alt="{{include.object.image_content_alt}}" src="{{include.object.image_content_path}}" />
+                        alt="{{include.object.image_content_alt}}" src="{{include.object.image_content_path | prepend: site.baseurl }}" />
                 {% else %}
                     {% picture feature_block_image {{image_path}} %}
                 {% endif %}
