@@ -26,7 +26,7 @@ highlighter: rouge
 permalink: /:categories/:title/
 # Default Markdown Processor
 markdown: kramdown
-plugins: [jekyll-4-picture-tag, jekyll-assets, jekyll-feed]
+plugins: [jekyll-4-picture-tag, jekyll-assets, jekyll-feed, jekyll-seo-tag]
 # SASS Config
 sass:
     sass_dir: _sass
